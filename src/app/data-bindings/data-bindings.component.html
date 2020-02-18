@@ -1,0 +1,14 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width" (input)="onChange($event)">
+    <mat-label>Insert a value here</mat-label>
+    <input matInput placeholder="Insert Value" [value]=inputValue>
+  </mat-form-field>
+  <div *ngIf="isRouteDemo == false">
+    <p>Inserted value: </p>
+    {{inputValue}}
+  </div>
+
+  <button mat-raised-button *ngIf="isRouteDemo" color="secondary" [routerLink]="" (click)="clear()">Reset</button>
+
+  <button mat-raised-button *ngIf="isRouteDemo" color="primary" [disabled]="!inputValue" [routerLink]="inputValue" style="margin-bottom: 20px; margin-left: 15px">Go!</button>
+</form>

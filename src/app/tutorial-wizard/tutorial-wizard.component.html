@@ -1,0 +1,44 @@
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <ng-template matStepLabel>File Structure & Components</ng-template>
+    <mat-card>
+      <app-file-structure></app-file-structure>
+    </mat-card>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <ng-template matStepLabel>Syntax</ng-template>
+    <div class="card-wrapper">
+      <div class="card-width">
+        <app-syntax-demo [FeatureImage]="'https://cdn.worldvectorlogo.com/logos/typescript.svg'"
+                         [Body]="'TypeScript is an open-source programming language developed and maintained by Microsoft.'"
+                         [Title]="'TypeScript'" [SubTitle]="'Based on JavaScript (but better)'"></app-syntax-demo>
+      </div>
+      <div class="card-width">
+      <app-syntax-demo
+        [FeatureImage]="'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png'"
+        [Body]="'Nothing new here'" [Title]="'HTML'" [SubTitle]="'Same old'"></app-syntax-demo>
+      </div>
+      <div class="card-width">
+      <app-syntax-demo [FeatureImage]="'https://i.ya-webdesign.com/images/css-3-logo-png-7.png'"
+                       [Body]="'For styling your HTML'" [Title]="'CSS/SCSS/SASS'"
+                       [SubTitle]="'You can decide'"></app-syntax-demo>
+      </div>
+    </div>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <ng-template matStepLabel>Data Bindings</ng-template>
+    <mat-card>
+      <app-data-bindings></app-data-bindings>
+    </mat-card>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <ng-template matStepLabel>Routes</ng-template>
+    <app-route-info></app-route-info>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <ng-template matStepLabel>NPM packages</ng-template>
+    <app-custom-trello></app-custom-trello>
+
+  </mat-step>
+</mat-horizontal-stepper>
+
