@@ -1,11 +1,11 @@
 <mat-horizontal-stepper [linear]="isLinear" #stepper>
-  <mat-step [stepControl]="firstFormGroup">
+  <mat-step [stepControl]="stepControl">
     <ng-template matStepLabel>File Structure & Components</ng-template>
     <mat-card>
       <app-file-structure></app-file-structure>
     </mat-card>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
+  <mat-step [stepControl]="stepControl">
     <ng-template matStepLabel>Syntax</ng-template>
     <div class="card-wrapper">
       <div class="card-width">
@@ -25,17 +25,17 @@
       </div>
     </div>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
+  <mat-step [stepControl]="stepControl">
     <ng-template matStepLabel>Data Bindings</ng-template>
     <mat-card>
       <app-data-bindings></app-data-bindings>
     </mat-card>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
+  <mat-step [stepControl]="stepControl">
     <ng-template matStepLabel>Routes</ng-template>
     <app-route-info></app-route-info>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
+  <mat-step [stepControl]="stepControl">
     <ng-template matStepLabel>NPM packages</ng-template>
     <app-custom-trello></app-custom-trello>
 

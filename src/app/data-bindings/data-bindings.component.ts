@@ -11,6 +11,7 @@ export class DataBindingsComponent implements OnInit {
   @Input()
   isRouteDemo = false;
   inputValue = '';
+  bidirectionalInputValue = '';
 
   constructor(public route: ActivatedRoute, public router: Router) {
   }
@@ -22,6 +23,7 @@ export class DataBindingsComponent implements OnInit {
     this.inputValue = '';
     this.router.navigate(['/home']);
   }
+
   onChange(event: Event) {
     this.inputValue = event.target['value'];
   }

@@ -8,17 +8,13 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class TutorialWizardComponent implements OnInit {
   isLinear = false;
-  firstFormGroup: FormGroup;
-  secondFormGroup: FormGroup;
+  stepControl: FormGroup;
 
   constructor(private _formBuilder: FormBuilder) {
   }
 
   ngOnInit() {
-    this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required]
-    });
-    this.secondFormGroup = this._formBuilder.group({
+    this.stepControl = this._formBuilder.group({
       secondCtrl: ['', Validators.required]
     });
   }
