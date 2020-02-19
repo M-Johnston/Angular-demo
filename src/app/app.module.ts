@@ -28,6 +28,9 @@ import { ExampleBComponent } from './example-b/example-b.component';
 import { ExampleCComponent } from './example-c/example-c.component';
 import { ExampleValueComponent } from './example-value/example-value.component';
 import { SyntaxDemoComponent } from './syntax-demo/syntax-demo.component';
+import { SurgeBaseComponent } from './surge-base/surge-base.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatListModule} from "@angular/material/list";
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -45,7 +48,8 @@ import { SyntaxDemoComponent } from './syntax-demo/syntax-demo.component';
     ExampleBComponent,
     ExampleCComponent,
     ExampleValueComponent,
-    SyntaxDemoComponent
+    SyntaxDemoComponent,
+    SurgeBaseComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +68,9 @@ import { SyntaxDemoComponent } from './syntax-demo/syntax-demo.component';
     ReactiveFormsModule,
     MatTreeModule,
     MatIconModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [MatDialog],
   bootstrap: [AppComponent],
