@@ -24,9 +24,10 @@
           <p mat-line>{{item.name}}</p>
         </div>
       </div>
-
     </div>
-    <mat-card class="card-item">hello</mat-card>
+    <div style="float: left; margin-left: 20px; margin-top: 15px">
+      <app-surge-info-card [User]="activeUser"></app-surge-info-card>
+    </div>
   </mat-tab>
   <mat-tab label="Groups">
     <div class="side-item"></div>

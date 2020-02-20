@@ -31,6 +31,7 @@ import { SyntaxDemoComponent } from './syntax-demo/syntax-demo.component';
 import { SurgeBaseComponent } from './surge-base/surge-base.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatListModule} from "@angular/material/list";
+import { SurgeInfoCardComponent } from './surge-base/surge-info-card/surge-info-card.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -49,7 +50,8 @@ import {MatListModule} from "@angular/material/list";
     ExampleCComponent,
     ExampleValueComponent,
     SyntaxDemoComponent,
-    SurgeBaseComponent
+    SurgeBaseComponent,
+    SurgeInfoCardComponent
   ],
   imports: [
     BrowserModule,
