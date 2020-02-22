@@ -2,10 +2,6 @@
   display: flex;
 }
 //NAV
-.branding-container {
-
-}
-
 .small-menu-item{
   text-align: center;
   height: 80px;
@@ -14,6 +10,7 @@
   width: 80px;
   margin: auto;
   cursor: pointer;
+  color: #0fa5e7;
 }
 
 
@@ -39,7 +36,7 @@
 }
 
 .active {
-  color: #0fa5e7;
+  color: white;
 }
 //END NAV
 .surge-primary-color {
@@ -49,18 +46,6 @@
 .search-bar {
   height: 70px;
   border-bottom: 1px solid #e1e1e1;
-}
-
-.list-item-active{
-  padding-top: 7px;
-  padding-bottom: 7px;
-  width:calc(100% - 20px);
-  padding-left: 20px;
-  font-family: Arial;
-  font-size: 0.8em;
-  color: #575757;
-  border-bottom: 1px solid #e1e1e1;
-  border-left: #0fa5e7 solid 3px;
 }
 
 ::ng-deep .mat-tab-body-wrapper{
@@ -88,10 +73,30 @@
 }
 
 .search-col{
-  width: 400px;
+  width: 350px;
   position: sticky;
   height: 100vh;
   float: left;
   z-index: 2;
   background-color: #1b2224;
+}
+
+.small-logo {
+  height: 115px;
+}
+.branding-section{
+
+}
+
+.list-item{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 60px;
+  width: calc(100% - 30px);
+  color: #cccccc;
+  font-size: 1.2em;
+}
+
+.list-item-active{
+  
 }
