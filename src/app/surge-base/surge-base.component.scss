@@ -27,6 +27,11 @@
   position: relative;
 }
 
+.side-item-dark{
+  background-color: #383838;
+  border-right: 1px solid #262626;
+}
+
 .example-sidenav {
   padding: 20px;
 }
@@ -55,12 +60,28 @@
   border-bottom: 1px solid #e1e1e1;
 }
 
-.list-item:hover {
-  background-color: #e8e8e8;
+.dark {
+  color: #eaeaea !important;
+  border-bottom: 1px solid #282828 !important;
 }
+
+.dark-item {
+  color: #eaeaea !important;
+  border-bottom: 1px solid #282828 !important;
+}
+
+.list-item-dark:hover {
+  background-color: #2e2e2e;
+}
+
 .list-item-active:hover {
   background-color: #e8e8e8;
 }
+
+.dark-item:hover {
+  background-color: #303030;
+}
+
 .list-item-active{
   padding-top: 7px;
   padding-bottom: 7px;
@@ -76,7 +97,10 @@
 .surge-toolbar{
   background-color: white;
   border-bottom: 1px #e1e1e1 solid;
-  font-family: 'Play', sans-serif;;
+  font-family: 'Play', sans-serif;
+  font-size: 0.85em;
+  font-weight: bold;
+  height: 60px;
 }
 
 ::ng-deep .mat-tab-body-wrapper{
@@ -98,3 +122,12 @@
   height: 300px;
   text-align: center;
 }
+
+.branded-text {
+  color: #40b3e6;
+}
+
+.dark-menu {
+
+}
+

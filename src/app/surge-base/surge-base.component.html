@@ -2,7 +2,7 @@
 
 
 <div class="example-container">
-<mat-toolbar class="surge-toolbar"><img src="../../assets/surgelogo.jpg" height="50" style="padding-left: 10px"/><span style="padding-left: 20px">Surge Identity</span></mat-toolbar>
+<mat-toolbar class="surge-toolbar"><img src="../../assets/surgelogo.jpg" height="30px" style="padding-left: 10px"/><span style="padding-left: 10px">Surge Identity</span></mat-toolbar>
 <mat-tab-group>
   <mat-tab label="Users">
     <div class="side-item">
@@ -15,18 +15,18 @@
 
       </p></div>
       <div *ngFor="let item of userItems">
-        <div *ngIf="item.name === activeUser.name" class="list-item-active"  (click)="onUserClicked(item)" >
+        <div *ngIf="item.name === activeUser.name" class="list-item-active "  (click)="onUserClicked(item)" >
           <img src="{{item.photo}}" class="avatar" style="float: left; padding-right: 12px" width="30px" height="30px">
           <p mat-line>{{item.name}}</p>
         </div>
-        <div *ngIf="item.name !== activeUser.name" class="list-item"  (click)="onUserClicked(item)" >
+        <div *ngIf="item.name !== activeUser.name" class="list-item "  (click)="onUserClicked(item)" >
           <img src="{{item.photo}}" class="avatar" style="float: left; padding-right: 12px" width="30px" height="30px">
           <p mat-line>{{item.name}}</p>
         </div>
       </div>
     </div>
     <div style="float: left; margin-left: 20px; margin-top: 15px">
-      <app-surge-info-card [User]="activeUser"></app-surge-info-card>
+      <app-surge-info-card *ngIf="activeUser.name != ''" [User]="activeUser"></app-surge-info-card>
     </div>
   </mat-tab>
   <mat-tab label="Groups">
