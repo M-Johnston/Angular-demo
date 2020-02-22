@@ -1,40 +1,19 @@
-<link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+<div class="full-screen">
 
-
-<div class="example-container">
-<mat-toolbar class="surge-toolbar"><img src="../../assets/surgelogo.jpg" height="30px" style="padding-left: 10px"/><span style="padding-left: 10px">Surge Identity</span></mat-toolbar>
-<mat-tab-group>
-  <mat-tab label="Users">
-    <div class="side-item">
-      <div class="search-bar"><p>
-        <mat-form-field style="padding-left: 20px; font-size: 0.9em" appearance="outline">
-          <mat-label>Search..</mat-label>
-          <input matInput placeholder="Full name">
-
-        </mat-form-field>
-
-      </p></div>
-      <div *ngFor="let item of userItems">
-        <div *ngIf="item.name === activeUser.name" class="list-item-active "  (click)="onUserClicked(item)" >
-          <img src="{{item.photo}}" class="avatar" style="float: left; padding-right: 12px" width="30px" height="30px">
-          <p mat-line>{{item.name}}</p>
-        </div>
-        <div *ngIf="item.name !== activeUser.name" class="list-item "  (click)="onUserClicked(item)" >
-          <img src="{{item.photo}}" class="avatar" style="float: left; padding-right: 12px" width="30px" height="30px">
-          <p mat-line>{{item.name}}</p>
-        </div>
+    <div class="sidenav">
+      <div class="branding-container">
+        Branding here
       </div>
+      <div class="small-menu-item">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+      </div>
+      <div [class.active]="activeTab == 'Users'" class="small-menu-item">Groups</div>
+      <div [class.active]="activeTab == 'Users'" class="small-menu-item">Applications</div>
+      <div [class.active]="activeTab == 'Users'" class="small-menu-item">Resources</div>
+      <div [class.active]="activeTab == 'Users'" class="small-menu-item">Claims</div>
+      <div [class.active]="activeTab == 'Users'" class="small-menu-item">Groups</div>
+      <div [class.active]="activeTab == 'Users'" class="small-menu-item">Groups</div>
     </div>
-    <div style="float: left; margin-left: 20px; margin-top: 15px">
-      <app-surge-info-card *ngIf="activeUser.name != ''" [User]="activeUser"></app-surge-info-card>
-    </div>
-  </mat-tab>
-  <mat-tab label="Groups">
-    <div class="side-item"></div>
-  </mat-tab>
-  <mat-tab label="Applications">
-    <div class="side-item"></div>
-  </mat-tab>
-</mat-tab-group>
-
+  <div class="search-col"></div>
+  <div class="header-toolbar"></div>
 </div>

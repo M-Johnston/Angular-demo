@@ -7,6 +7,7 @@ import {UserModel} from '../../models/userModel';
   styleUrls: ['./surge-base.component.scss']
 })
 export class SurgeBaseComponent implements OnInit {
+  activeTab: string;
 
   public userItems = [new UserModel('M Johnston', '/assets/avatar.png', 'Presenting'),
     new UserModel('N Jooste', '/assets/avatar.png', 'Starving...'),
@@ -18,6 +19,9 @@ export class SurgeBaseComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (this.activeTab == null || this.activeTab == ''){
+      this.activeTab = 'Users';
+    }
   }
 
   onUserClicked(name: UserModel) {

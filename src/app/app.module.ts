@@ -32,6 +32,7 @@ import { SurgeBaseComponent } from './surge-base/surge-base.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatListModule} from "@angular/material/list";
 import { SurgeInfoCardComponent } from './surge-base/surge-info-card/surge-info-card.component';
+import { SideNavComponent } from './surge-base/side-nav/side-nav.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -51,7 +52,8 @@ import { SurgeInfoCardComponent } from './surge-base/surge-info-card/surge-info-
     ExampleValueComponent,
     SyntaxDemoComponent,
     SurgeBaseComponent,
-    SurgeInfoCardComponent
+    SurgeInfoCardComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,

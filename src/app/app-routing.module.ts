@@ -11,35 +11,43 @@ import {SurgeBaseComponent} from "./surge-base/surge-base.component";
 
 const routes: Routes = [
   {
-    path: 'home',
-    component: HomeComponent,
-    data: {title: 'Home'},
+    path: '',
+    data: {title: 'Demo'},
     children: [
-      {
-        path: 'surge',
+      {path: 'surge',
         component: SurgeBaseComponent,
-        data: {title: 'Surge'}
-      },
+        data: {title: 'Surge'}},
       {
-        path: 'ExampleA',
-        component: ExampleAComponent,
-        data: {title: 'Route Info'},
-      },
-      {
-        path: 'ExampleB',
-        component: ExampleBComponent,
-        data: {title: 'Route Info'},
-      },
-      {
-        path: 'ExampleC',
-        component: ExampleCComponent,
-        data: {title: 'Route Info'},
-      },
-      {
-        path: ':value',
-        component: ExampleValueComponent,
-        data: {title: 'Route Info'}
-      }]
+      path: 'home',
+      component: HomeComponent,
+      data: {title: 'Home'},
+      children: [
+        {
+          path: 'surge',
+          component: SurgeBaseComponent,
+          data: {title: 'Surge'}
+        },
+        {
+          path: 'ExampleA',
+          component: ExampleAComponent,
+          data: {title: 'Route Info'},
+        },
+        {
+          path: 'ExampleB',
+          component: ExampleBComponent,
+          data: {title: 'Route Info'},
+        },
+        {
+          path: 'ExampleC',
+          component: ExampleCComponent,
+          data: {title: 'Route Info'},
+        },
+        {
+          path: ':value',
+          component: ExampleValueComponent,
+          data: {title: 'Route Info'}
+        }]
+    }]
   },
 ];
 
