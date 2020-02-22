@@ -13,16 +13,18 @@
   line-height: 90px;
   width: 80px;
   margin: auto;
+  cursor: pointer;
 }
 
-.small-menu-item-expanded {}
 
 .header-toolbar{
   position:sticky;
   height:50px;
   width:30%;
+  margin-left: 30px;
+  margin-right: 30px;
   float: left;
-  border-bottom: solid 1px gray;
+  border-bottom: solid 1px #c6c6c6;
   flex-grow: 100;
   //background-color: #151b1d;
 }
@@ -40,89 +42,13 @@
   color: #0fa5e7;
 }
 //END NAV
-
-.example-container {
-  width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-flow: column;
-  height: 100%;
-}
-
-.example-sidenav-content {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
-.side-item{
-  float: left;
-  background-color: #f4f4f4;
-  border-right: 1px solid #e1e1e1;
-  width: 250px;
-  height: 400px;
-  flex: 0 1 auto;
-  top: 0;
-  bottom: 0;
-  z-index: 100;
-  flex-flow: column;
-  position: relative;
-}
-
-.side-item-dark{
-  background-color: #383838;
-  border-right: 1px solid #262626;
-}
-
-.example-sidenav {
-  padding: 20px;
-}
-
 .surge-primary-color {
   color: #40b3e6;
-}
-
-.surge-secondary-color {
-
 }
 
 .search-bar {
   height: 70px;
   border-bottom: 1px solid #e1e1e1;
-}
-
-.list-item {
-  padding-top: 7px;
-  padding-bottom: 7px;
-  width:calc(100% - 20px);
-  padding-left: 20px;
-  font-family: Arial;
-  font-size: 0.8em;
-  color: #575757;
-  border-bottom: 1px solid #e1e1e1;
-}
-
-.dark {
-  color: #eaeaea !important;
-  border-bottom: 1px solid #282828 !important;
-}
-
-.dark-item {
-  color: #eaeaea !important;
-  border-bottom: 1px solid #282828 !important;
-}
-
-.list-item-dark:hover {
-  background-color: #2e2e2e;
-}
-
-.list-item-active:hover {
-  background-color: #e8e8e8;
-}
-
-.dark-item:hover {
-  background-color: #303030;
 }
 
 .list-item-active{
@@ -135,15 +61,6 @@
   color: #575757;
   border-bottom: 1px solid #e1e1e1;
   border-left: #0fa5e7 solid 3px;
-}
-
-.surge-toolbar{
-  background-color: white;
-  border-bottom: 1px #e1e1e1 solid;
-  font-family: 'Play', sans-serif;
-  font-size: 0.85em;
-  font-weight: bold;
-  height: 60px;
 }
 
 ::ng-deep .mat-tab-body-wrapper{

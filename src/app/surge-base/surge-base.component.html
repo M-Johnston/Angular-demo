@@ -1,15 +1,21 @@
 <div class="full-screen">
 
     <div class="sidenav">
-      <div class="branding-container">
-        Branding here
-      </div>
       <div class="small-menu-item">
         <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
       </div>
-      <div [class.active]="activeTab == 'Users'" class="small-menu-item">Groups</div>
-      <div [class.active]="activeTab == 'Users'" class="small-menu-item">Applications</div>
-      <div [class.active]="activeTab == 'Users'" class="small-menu-item">Resources</div>
+      <div [class.active]="activeTab == 'Users'" class="small-menu-item">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">account_circle</mat-icon>
+      </div>
+      <div [class.active]="activeTab == 'Users'" class="small-menu-item">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">group</mat-icon>
+      </div>
+      <div [class.active]="activeTab == 'Users'" class="small-menu-item">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">storefront</mat-icon>
+      </div>
+      <div [class.active]="activeTab == 'Users'" class="small-menu-item">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">vpn_key</mat-icon>
+      </div>
       <div [class.active]="activeTab == 'Users'" class="small-menu-item">Claims</div>
       <div [class.active]="activeTab == 'Users'" class="small-menu-item">Groups</div>
       <div [class.active]="activeTab == 'Users'" class="small-menu-item">Groups</div>
