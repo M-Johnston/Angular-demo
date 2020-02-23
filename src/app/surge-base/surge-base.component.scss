@@ -110,6 +110,7 @@
   width: calc(100% - 50px);
   color: #cccccc;
   font-size: 1em;
+  cursor: pointer;
 }
 
 .list-item:hover{
@@ -147,10 +148,12 @@
 }
 
 .breadcrumb {
-line-height: 50px;
-  padding-left: 10%;
+  line-height: 50px;
   font-size: 0.9em;
+  text-align: center;
   float: left;
+  position: absolute;
+  width: 100%;
 }
 
 .breadcrumb-tab {
@@ -186,7 +189,27 @@ line-height: 50px;
   float: right;
   text-align: right;
   line-height: 50px !important;
+  padding-right: 20px;
 }
+
+.toolbar-settings-item {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #898989;
+  z-index: 100;
+  cursor:pointer;
+}
+
+.toolbar-settings-item:hover {
+  color: #262626 !important;
+}
+
 .toolbar-settings > ::ng-deep .mat-icon {
   line-height: 50px;
+}
+
+//color: #262626 !important;
+
+.toolbar-settings > ::ng-deep .mat-icon:hover {
+  color: #262626 !important;
 }

@@ -21,7 +21,7 @@ export class SurgeBaseComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (this.activeTab == null || this.activeTab == ''){
+    if (this.activeTab == null || this.activeTab === '') {
       this.activeTab = 'Users';
     }
     this.activeTabItem = null;
@@ -33,6 +33,10 @@ export class SurgeBaseComponent implements OnInit {
 
   onUserClicked(name: UserModel) {
     this.activeUser = name;
+  }
+
+  onTabItemClicked(tab: string) {
+    this.activeTab = tab;
   }
 
 }

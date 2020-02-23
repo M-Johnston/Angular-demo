@@ -6,22 +6,19 @@
       <img src="../../assets/Surge.PNG" width="60"
            style="padding-left: 10px;padding-right: 10px; padding-top: 30px; padding-bottom: 30px"/>
     </div>
-    <div [class.active]="activeTab == 'Account'" class="small-menu-item">
-      <mat-icon aria-hidden="false" aria-label="Example home icon">account_circle</mat-icon>
-    </div>
-    <div [matTooltip]="'Users'" [matTooltipPosition]="'right'" [class.active]="activeTab == 'Users'"
+    <div [matTooltip]="'Users'" [matTooltipPosition]="'right'" (click)="onTabItemClicked('Users')" [class.active]="activeTab == 'Users'"
          class="small-menu-item">
       <mat-icon aria-hidden="false" aria-label="Example home icon">group</mat-icon>
     </div>
-    <div [matTooltip]="'Store'" [matTooltipPosition]="'right'" [class.active]="activeTab == 'Store'"
+    <div [matTooltip]="'Store'" [matTooltipPosition]="'right'" (click)="onTabItemClicked('Store')" [class.active]="activeTab == 'Store'"
          class="small-menu-item">
       <mat-icon aria-hidden="false" aria-label="Example home icon">storefront</mat-icon>
     </div>
-    <div [matTooltip]="'Claims'" [matTooltipPosition]="'right'" [class.active]="activeTab == 'Claims'"
+    <div [matTooltip]="'Claims'" [matTooltipPosition]="'right'" (click)="onTabItemClicked('Claims')" [class.active]="activeTab == 'Claims'"
          class="small-menu-item">
       <mat-icon aria-hidden="false" aria-label="Example home icon">vpn_key</mat-icon>
     </div>
-    <div [matTooltip]="'Applications'" [matTooltipPosition]="'right'" [class.active]="activeTab == 'Applications'"
+    <div [matTooltip]="'Applications'" [matTooltipPosition]="'right'" (click)="onTabItemClicked('Applications')" [class.active]="activeTab == 'Applications'"
          class="small-menu-item">
       <mat-icon aria-hidden="false" aria-label="Example home icon">code</mat-icon>
     </div>
@@ -47,8 +44,8 @@
         <span class="breadcrumb-tab-item" *ngIf="activeTabItem !== null && activeTabItem !== ''"><span style="padding-right: 8px; padding-left: 8px">/</span>{{activeTabItem.name}}</span>
       </div>
       <div class="toolbar-settings">
-        <mat-icon aria-hidden="false" aria-label="Example home icon">settings</mat-icon>
-        <mat-icon aria-hidden="false" aria-label="Example home icon">account_circle</mat-icon>
+        <mat-icon class="toolbar-settings-item" aria-hidden="false" aria-label="Example home icon">settings</mat-icon>
+        <mat-icon class="toolbar-settings-item" aria-hidden="false" aria-label="Example home icon">account_circle</mat-icon>
       </div>
     </div>
     <div class="content">
