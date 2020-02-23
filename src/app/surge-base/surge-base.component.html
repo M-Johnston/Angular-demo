@@ -2,7 +2,8 @@
 
   <div class="sidenav">
     <div class="small-logo">
-      <img src="../../assets/Surge.PNG" width="60" style="padding-left: 10px;padding-right: 10px; padding-top: 30px; padding-bottom: 30px"/>
+      <img src="../../assets/Surge.PNG" width="60"
+           style="padding-left: 10px;padding-right: 10px; padding-top: 30px; padding-bottom: 30px"/>
     </div>
     <div [class.active]="activeTab == 'Account'" class="small-menu-item">
       <mat-icon aria-hidden="false" aria-label="Example home icon">account_circle</mat-icon>
@@ -28,7 +29,15 @@
     <div class="small-logo">
 
     </div>
-    <div *ngFor="let item of userItems" class="list-item">{{item.name}}</div>
+    <div class="active-tab-title">{{activeTab}}</div>
+    <div *ngFor="let item of userItems" class="list-item-wrapper" (click)="setActiveTabItem(item)">
+      <div class="list-item" [class.list-item-active]="activeTabItem == item.name" >
+        {{item.name}}
+      </div>
+    </div>
   </div>
-  <div class="header-toolbar"></div>
+  <div class="contents-wrapper">
+    <div class="header-toolbar"></div>
+    <div class="content">hello</div>
+  </div>
 </div>

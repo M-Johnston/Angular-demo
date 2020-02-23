@@ -6,7 +6,7 @@ import {ExampleAComponent} from './example-a/example-a.component';
 import {ExampleBComponent} from './example-b/example-b.component';
 import {ExampleCComponent} from './example-c/example-c.component';
 import {ExampleValueComponent} from './example-value/example-value.component';
-import {SurgeBaseComponent} from "./surge-base/surge-base.component";
+import {SurgeBaseComponent} from './surge-base/surge-base.component';
 
 
 const routes: Routes = [
