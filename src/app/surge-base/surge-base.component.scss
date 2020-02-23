@@ -22,7 +22,6 @@
   float: left;
   border-bottom: solid 1px #c6c6c6;
   flex-grow: 100;
-  //background-color: #151b1d;
 }
 
 .sidenav {
@@ -68,7 +67,16 @@
 }
 
 .branded-text {
-  color: #40b3e6;
+  background: linear-gradient(to bottom, #40b3e6 0%, #0066ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  float: left;
+  font-size: 1.2em;
+  line-height: 50px;
+  padding-left: 60px;
+  font-weight: 800;
+  font-family: Kanit;
+  text-transform: uppercase;
 }
 
 .search-col{
@@ -82,6 +90,7 @@
 
 .small-logo {
   height: 115px;
+  text-align: center;
 }
 .branding-section{
 
@@ -135,4 +144,49 @@
   padding-bottom: 30px;
   font-size: 1.3em;
   color: #f9f3f5;
+}
+
+.breadcrumb {
+line-height: 50px;
+  padding-left: 10%;
+  font-size: 0.9em;
+  float: left;
+}
+
+.breadcrumb-tab {
+  color: gray;
+}
+
+.breadcrumb-tab-item {
+  color: gray;
+}
+
+.search-field {
+  background-color: #232b2d;
+  padding:5px 15px;
+  border-radius: 10px;
+  border-color: transparent;
+  height: 40px;
+  width: calc(100% - 70px);
+  margin-top: 30px;
+  color: #cccccc;
+}
+
+.add-item {
+  float: right;
+  margin-right: 30px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  font-weight: 100;
+  color: lightgray;
+  line-height: 20px;
+}
+
+.toolbar-settings{
+  float: right;
+  text-align: right;
+  line-height: 50px !important;
+}
+.toolbar-settings > ::ng-deep .mat-icon {
+  line-height: 50px;
 }
