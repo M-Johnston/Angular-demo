@@ -2,14 +2,20 @@
   <div class="normal-padding">
     <div style="width: 100%;">
       <div class="header">{{user.name}}</div>
+      <div style="display: inline-flex; margin-left: 30px; margin-bottom: 5px">
+        <app-custom-tag [Enabled]="true" [text]="'Enabled'" class="custom-tag"></app-custom-tag>
+        <app-custom-tag [Enabled]="false" [text]="'Lockout Disabled'" class="custom-tag"></app-custom-tag>
+      </div>
       <button mat-stroked-button color="primary" class="edit-button">Edit</button>
     </div>
     <div class="personal-details-list">
       <p class="personal-details">
-        <mat-icon style="padding-right: 10px" aria-hidden="false" aria-label="Example home icon">email</mat-icon>{{user.email}}
+        <mat-icon style="padding-right: 10px" aria-hidden="false" aria-label="Example home icon">email</mat-icon>
+        {{user.email}}
       </p>
       <p class="personal-details">
-        <mat-icon style="padding-right: 10px" aria-hidden="false" aria-label="Example home icon">phone</mat-icon>{{user.phoneNumber}}
+        <mat-icon style="padding-right: 10px" aria-hidden="false" aria-label="Example home icon">phone</mat-icon>
+        {{user.phoneNumber}}
       </p>
     </div>
   </div>

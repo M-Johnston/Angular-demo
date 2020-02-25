@@ -1,0 +1,19 @@
+.border-enabled {
+  border: solid 1px #54ce5c;
+  color: #54ce5c;
+  font-size: 0.8em;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 5px;
+  font-weight: 500;
+}
+
+.border-disabled {
+  border: solid 1px #ff8473;
+  color: #ff8473;
+  font-size: 0.8em;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 5px;
+  font-weight: 500;
+}

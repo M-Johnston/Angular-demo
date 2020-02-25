@@ -35,6 +35,7 @@ import { SurgeInfoCardComponent } from './surge-base/surge-info-card/surge-info-
 import { SideNavComponent } from './surge-base/side-nav/side-nav.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
 import { InfoComponent } from './surge-base/info/info.component';
+import { CustomTagComponent } from './surge-base/custom-tag/custom-tag.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -56,7 +57,8 @@ import { InfoComponent } from './surge-base/info/info.component';
     SurgeBaseComponent,
     SurgeInfoCardComponent,
     SideNavComponent,
-    InfoComponent
+    InfoComponent,
+    CustomTagComponent
   ],
   imports: [
     BrowserModule,
