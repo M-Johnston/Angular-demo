@@ -58,7 +58,7 @@
         </mat-icon>
       </div>
     </div>
-    <div class="content">
+    <div class="content" *ngIf="activeTabItem !== null">
       <h2>General</h2>
       <mat-card>
         Hello World
@@ -70,11 +70,6 @@
           <mat-tab label="Claims"> Claims</mat-tab>
           <mat-tab label="Applications"> Applications</mat-tab>
         </mat-tab-group>
-      </mat-card>
-
-
-      <mat-card *ngIf="activeTabItem !== null">
-        {{activeTabItem.name}}
       </mat-card>
     </div>
   </div>
