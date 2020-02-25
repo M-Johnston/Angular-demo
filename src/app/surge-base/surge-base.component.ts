@@ -9,6 +9,8 @@ import {UserModel} from '../../models/userModel';
 export class SurgeBaseComponent implements OnInit {
   activeTab: string;
   activeTabItem: UserModel;
+  searchValue: string;
+  public filteredUserItems;
 
   public userItems = [new UserModel('M Johnston', '/assets/avatar.png', 'Presenting'),
     new UserModel('N Jooste', '/assets/avatar.png', 'Starving...'),
@@ -21,6 +23,8 @@ export class SurgeBaseComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.searchValue = '';
+    this.filteredUserItems = this.userItems;
     if (this.activeTab == null || this.activeTab === '') {
       this.activeTab = 'Users';
     }
@@ -37,6 +41,10 @@ export class SurgeBaseComponent implements OnInit {
 
   onTabItemClicked(tab: string) {
     this.activeTab = tab;
+  }
+
+  onSearchUser(name: string) {
+    this.filteredUserItems = this.userItems.filter(x => x.name.includes(name));
   }
 
 }

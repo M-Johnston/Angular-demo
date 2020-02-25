@@ -6,29 +6,37 @@
       <img src="../../assets/Surge.PNG" width="60"
            style="padding-left: 10px;padding-right: 10px; padding-top: 30px; padding-bottom: 30px"/>
     </div>
-    <div [matTooltip]="'Users'" [matTooltipPosition]="'right'" (click)="onTabItemClicked('Users')" [class.active]="activeTab == 'Users'"
+    <div [matTooltip]="'Users'" [matTooltipPosition]="'right'" (click)="onTabItemClicked('Users')"
+         [class.active]="activeTab == 'Users'"
          class="small-menu-item">
       <mat-icon aria-hidden="false" aria-label="Example home icon">group</mat-icon>
     </div>
-    <div [matTooltip]="'Store'" [matTooltipPosition]="'right'" (click)="onTabItemClicked('Store')" [class.active]="activeTab == 'Store'"
+    <div [matTooltip]="'Store'" [matTooltipPosition]="'right'" (click)="onTabItemClicked('Store')"
+         [class.active]="activeTab == 'Store'"
          class="small-menu-item">
       <mat-icon aria-hidden="false" aria-label="Example home icon">storefront</mat-icon>
     </div>
-    <div [matTooltip]="'Claims'" [matTooltipPosition]="'right'" (click)="onTabItemClicked('Claims')" [class.active]="activeTab == 'Claims'"
+    <div [matTooltip]="'Claims'" [matTooltipPosition]="'right'" (click)="onTabItemClicked('Claims')"
+         [class.active]="activeTab == 'Claims'"
          class="small-menu-item">
       <mat-icon aria-hidden="false" aria-label="Example home icon">vpn_key</mat-icon>
     </div>
-    <div [matTooltip]="'Applications'" [matTooltipPosition]="'right'" (click)="onTabItemClicked('Applications')" [class.active]="activeTab == 'Applications'"
+    <div [matTooltip]="'Applications'" [matTooltipPosition]="'right'" (click)="onTabItemClicked('Applications')"
+         [class.active]="activeTab == 'Applications'"
          class="small-menu-item">
       <mat-icon aria-hidden="false" aria-label="Example home icon">code</mat-icon>
     </div>
   </div>
   <div class="search-col">
     <div class="small-logo">
-      <input placeholder="Search" class="search-field"/>
+      <input placeholder="Search" [(ngModel)]="searchValue" class="search-field" (input)="onSearchUser(searchValue)"/>
     </div>
-    <div class="active-tab-title"><span>{{activeTab}}</span><div class="add-item"><mat-icon aria-hidden="false" aria-label="Example home icon">add</mat-icon></div></div>
-    <div *ngFor="let item of userItems" class="list-item-wrapper" (click)="setActiveTabItem(item)">
+    <div class="active-tab-title"><span>{{activeTab}}</span>
+      <div class="add-item">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">add</mat-icon>
+      </div>
+    </div>
+    <div *ngFor="let item of filteredUserItems" class="list-item-wrapper" (click)="setActiveTabItem(item)">
       <div class="list-item" [class.list-item-active]="activeTabItem !== null && activeTabItem.name == item.name">
         {{item.name}}
       </div>
@@ -41,14 +49,30 @@
       </div>
       <div class="breadcrumb">
         <span class="breadcrumb-tab">{{activeTab}}</span>
-        <span class="breadcrumb-tab-item" *ngIf="activeTabItem !== null && activeTabItem !== ''"><span style="padding-right: 8px; padding-left: 8px">/</span>{{activeTabItem.name}}</span>
+        <span class="breadcrumb-tab-item" *ngIf="activeTabItem !== null && activeTabItem !== ''"><span
+          style="padding-right: 8px; padding-left: 8px">/</span>{{activeTabItem.name}}</span>
       </div>
       <div class="toolbar-settings">
         <mat-icon class="toolbar-settings-item" aria-hidden="false" aria-label="Example home icon">settings</mat-icon>
-        <mat-icon class="toolbar-settings-item" aria-hidden="false" aria-label="Example home icon">account_circle</mat-icon>
+        <mat-icon class="toolbar-settings-item" aria-hidden="false" aria-label="Example home icon">account_circle
+        </mat-icon>
       </div>
     </div>
     <div class="content">
+      <h2>General</h2>
+      <mat-card>
+        Hello World
+      </mat-card>
+      <h2>Access</h2>
+      <mat-card>
+        <mat-tab-group>
+          <mat-tab label="Groups"> Groups</mat-tab>
+          <mat-tab label="Claims"> Claims</mat-tab>
+          <mat-tab label="Applications"> Applications</mat-tab>
+        </mat-tab-group>
+      </mat-card>
+
+
       <mat-card *ngIf="activeTabItem !== null">
         {{activeTabItem.name}}
       </mat-card>
