@@ -12,12 +12,12 @@ export class SurgeBaseComponent implements OnInit {
   searchValue: string;
   public filteredUserItems;
 
-  public userItems = [new UserModel('M Johnston', '/assets/avatar.png', 'Presenting'),
-    new UserModel('N Jooste', '/assets/avatar.png', 'Starving...'),
-    new UserModel('M Wheeler', '/assets/avatar.png', 'At Deloitte'),
-    new UserModel('N le Roux', '/assets/avatar.png', 'At the chiropractor'),
-    new UserModel('J de Klerk', '/assets/avatar.png', 'Researching Algorithms')];
-  activeUser: UserModel = new UserModel('', '', '');
+  public userItems = [new UserModel('M Johnston', 'michael@email.com', 'Presenting', '012 345 6789'),
+    new UserModel('N Jooste', 'ruan@email.com', 'Starving...', '012 345 6789'),
+    new UserModel('M Wheeler', 'micheal@email.com', 'At Deloitte', '012 345 6789'),
+    new UserModel('N le Roux', 'nic@email.com', 'At the chiropractor', '012 345 6789'),
+    new UserModel('J de Klerk', 'james@email.com', 'Researching Algorithms', '012 345 6789')];
+  activeUser: UserModel = new UserModel('', '', '', '');
 
   constructor() {
   }
@@ -44,7 +44,7 @@ export class SurgeBaseComponent implements OnInit {
   }
 
   onSearchUser(name: string) {
-    this.filteredUserItems = this.userItems.filter(x => x.name.includes(name));
+    this.filteredUserItems = this.userItems.filter(x => x.name.toLowerCase().includes(name.toLowerCase()));
   }
 
 }

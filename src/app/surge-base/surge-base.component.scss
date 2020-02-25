@@ -138,8 +138,14 @@ h2 {
 }
 
 .content{
-  padding: 50px 50px 50px 50px;
   float: left;
+  flex-grow: 100;
+  flex: content;
+  width: 100%;
+}
+
+.normal-padding {
+     padding: 50px 50px 50px 50px;
 }
 
 .active-tab-title {

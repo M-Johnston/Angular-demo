@@ -33,7 +33,7 @@
     </div>
     <div class="active-tab-title"><span>{{activeTab}}</span>
       <div class="add-item">
-        <mat-icon aria-hidden="false" aria-label="Example home icon">add</mat-icon>
+
       </div>
     </div>
     <div *ngFor="let item of filteredUserItems" class="list-item-wrapper" (click)="setActiveTabItem(item)">
@@ -59,18 +59,7 @@
       </div>
     </div>
     <div class="content" *ngIf="activeTabItem !== null">
-      <h2>General</h2>
-      <mat-card>
-        Hello World
-      </mat-card>
-      <h2>Access</h2>
-      <mat-card>
-        <mat-tab-group>
-          <mat-tab label="Groups"> Groups</mat-tab>
-          <mat-tab label="Claims"> Claims</mat-tab>
-          <mat-tab label="Applications"> Applications</mat-tab>
-        </mat-tab-group>
-      </mat-card>
+      <app-info [user]="activeTabItem"></app-info>
     </div>
   </div>
 </div>

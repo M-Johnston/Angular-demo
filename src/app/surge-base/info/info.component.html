@@ -1,0 +1,21 @@
+<div class="general-info">
+  <div class="normal-padding">
+    <div style="width: 100%;">
+      <div class="header">{{user.name}}</div>
+      <button mat-stroked-button color="primary" class="edit-button">Edit</button>
+    </div>
+    <div class="personal-details-list">
+      <p class="personal-details">
+        <mat-icon style="padding-right: 10px" aria-hidden="false" aria-label="Example home icon">email</mat-icon>{{user.email}}
+      </p>
+      <p class="personal-details">
+        <mat-icon style="padding-right: 10px" aria-hidden="false" aria-label="Example home icon">phone</mat-icon>{{user.phoneNumber}}
+      </p>
+    </div>
+  </div>
+  <mat-tab-group>
+    <mat-tab style="width: calc(100%-30px); padding-left: 30px" class="tab-border" label="Groups"></mat-tab>
+    <mat-tab label="Claims"></mat-tab>
+    <mat-tab label="Applications"></mat-tab>
+  </mat-tab-group>
+</div>
