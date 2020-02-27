@@ -18,13 +18,13 @@ export class CustomTrelloComponent implements OnInit {
 
   ngOnInit() {
     this.todo = [
-      new TrelloItem(0, 'Scaffolding', 'Scaffolding description'),
       new TrelloItem(1, 'Integration', 'Integration description'),
       new TrelloItem(2, 'Services', 'Services description'),
       new TrelloItem(3, 'Tests', 'Tests description')
     ];
 
     this.done = [
+      new TrelloItem(0, 'Scaffolding', 'Scaffolding description'),
       new TrelloItem(4, 'Check e-mail', 'Check e-mail description')
     ];
   }

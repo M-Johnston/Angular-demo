@@ -1,11 +1,12 @@
 <mat-card>
-  <p>Welcome to the route demo</p>
+  <div class="bottom-border">
+    <h2>Welcome to the route demo</h2>
+  </div>
   <p>
     <button mat-raised-button [routerLink]="'surge'"  style="margin-right: 15px">Surge</button>
     <button mat-raised-button [routerLink]="'ExampleB'" style="margin-right: 15px">Example B</button>
     <button mat-raised-button [routerLink]="'ExampleC'" style="margin-right: 15px">Example C</button>
   </p>
-
   <app-data-bindings [isRouteDemo]="true"></app-data-bindings>
   <router-outlet></router-outlet>
 </mat-card>

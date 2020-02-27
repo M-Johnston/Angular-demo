@@ -1,0 +1,12 @@
+<mat-card>
+<div class="bottom-border"><h2>Food Service Demo</h2></div>
+
+  <p>Calling a service that has been injected into the component</p>
+  <button mat-raised-button (click)="onGetFoodClick()">Call Service</button>
+
+  <ul>
+    <li *ngFor="let food of foodList" class="food-item">
+      {{food}}
+    </li>
+  </ul>
+</mat-card>

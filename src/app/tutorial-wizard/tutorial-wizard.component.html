@@ -1,9 +1,7 @@
 <mat-horizontal-stepper [linear]="isLinear" #stepper>
   <mat-step [stepControl]="stepControl">
     <ng-template matStepLabel>File Structure & Components</ng-template>
-    <mat-card>
       <app-file-structure></app-file-structure>
-    </mat-card>
   </mat-step>
   <mat-step [stepControl]="stepControl">
     <ng-template matStepLabel>Syntax</ng-template>
@@ -36,9 +34,12 @@
     <app-route-info></app-route-info>
   </mat-step>
   <mat-step [stepControl]="stepControl">
+    <ng-template matStepLabel>Services & Dependency Injection</ng-template>
+    <app-service-di></app-service-di>
+  </mat-step>
+  <mat-step [stepControl]="stepControl">
     <ng-template matStepLabel>NPM packages</ng-template>
     <app-custom-trello></app-custom-trello>
-
   </mat-step>
 </mat-horizontal-stepper>
 

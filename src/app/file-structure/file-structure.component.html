@@ -1,21 +1,42 @@
-<div class="bottom-border">
-  <p>It's all about components</p>
-</div>
-<mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
-  <!-- This is the tree node template for leaf nodes -->
-  <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
-    <!-- use a disabled button to provide padding for tree leaf -->
-    <button mat-icon-button disabled></button>
-    {{node.name}}
-  </mat-tree-node>
-  <!-- This is the tree node template for expandable nodes -->
-  <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
-    <button mat-icon-button matTreeNodeToggle
-            [attr.aria-label]="'toggle ' + node.name">
-      <mat-icon class="mat-icon-rtl-mirror">
-        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
-      </mat-icon>
-    </button>
-    {{node.name}}
-  </mat-tree-node>
-</mat-tree>
+<mat-card>
+  <div>
+    <div class="bottom-border">
+      <h2>The Basics</h2>
+    </div>
+    <h3>Components:</h3>
+    <p>Define views, which are sets of screen elements that Angular can choose among and modify according to your
+      program logic and data.</p>
+
+    <p>Components use services, which provide specific functionality not directly related to views. Service providers
+      can be injected into components as dependencies, making your code modular, reusable, and efficient.</p>
+
+    <h3>NgModules</h3>
+    <p>Provides context for components. NgModules collect related code into functional sets; an
+      Angular app is defined by a set of NgModules. An app always has at least a root module that enables bootstrapping,
+      and typically has many more feature modules.</p>
+  </div>
+</mat-card>
+<br/>
+<mat-card>
+  <div class="bottom-border">
+    <h2>The file structure</h2>
+  </div>
+  <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+    <!-- This is the tree node template for leaf nodes -->
+    <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+      <!-- use a disabled button to provide padding for tree leaf -->
+      <button mat-icon-button disabled></button>
+      {{node.name}}
+    </mat-tree-node>
+    <!-- This is the tree node template for expandable nodes -->
+    <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+      <button mat-icon-button matTreeNodeToggle
+              [attr.aria-label]="'toggle ' + node.name">
+        <mat-icon class="mat-icon-rtl-mirror">
+          {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+        </mat-icon>
+      </button>
+      {{node.name}}
+    </mat-tree-node>
+  </mat-tree>
+</mat-card>
