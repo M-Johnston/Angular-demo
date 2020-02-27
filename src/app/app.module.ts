@@ -37,6 +37,9 @@ import {MatTooltipModule} from "@angular/material/tooltip";
 import { InfoComponent } from './surge-base/info/info.component';
 import { CustomTagComponent } from './surge-base/custom-tag/custom-tag.component';
 import { ServiceDiComponent } from './service-di/service-di.component';
+import { EditUserComponent } from './surge-base/edit-user/edit-user.component';
+import { AccessCardComponent } from './surge-base/access-card/access-card.component';
+import { PermissionCardComponent } from './surge-base/permission-card/permission-card.component';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -60,7 +63,10 @@ import { ServiceDiComponent } from './service-di/service-di.component';
     SideNavComponent,
     InfoComponent,
     CustomTagComponent,
-    ServiceDiComponent
+    ServiceDiComponent,
+    EditUserComponent,
+    AccessCardComponent,
+    PermissionCardComponent
   ],
   imports: [
     BrowserModule,

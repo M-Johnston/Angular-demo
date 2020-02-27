@@ -1,0 +1,11 @@
+<mat-card class="margin-general">
+  <mat-list>
+    <h3 mat-subheader>Nebula</h3>
+    <mat-list-item *ngFor="let permissionItem of permissionItems">
+      <mat-icon mat-list-icon>folder</mat-icon>
+      <h4 mat-line>{{permissionItem.name}}</h4>
+      <p mat-line> {{permissionItem.description}} </p>
+    </mat-list-item>
+
+  </mat-list>
+</mat-card>

@@ -20,8 +20,12 @@
     </div>
   </div>
   <mat-tab-group>
-    <mat-tab style="width: calc(100%-30px); padding-left: 30px" class="tab-border" label="Groups"></mat-tab>
-    <mat-tab label="Claims"></mat-tab>
+    <mat-tab style="width: calc(100%-30px); padding-left: 30px" class="tab-border" label="Groups">
+      <app-access-card></app-access-card>
+    </mat-tab>
+    <mat-tab label="Claims">
+      <app-permission-card></app-permission-card>
+    </mat-tab>
     <mat-tab label="Applications"></mat-tab>
   </mat-tab-group>
 </div>

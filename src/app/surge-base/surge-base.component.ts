@@ -28,7 +28,7 @@ export class SurgeBaseComponent implements OnInit {
     if (this.activeTab == null || this.activeTab === '') {
       this.activeTab = 'Users';
     }
-    this.activeTabItem = null;
+    this.activeTabItem = this.userItems[0];
   }
 
   setActiveTabItem(item: UserModel) {
