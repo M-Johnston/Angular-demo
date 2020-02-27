@@ -29,6 +29,9 @@ h3 {
   padding-left: 50px;
 }
 
+::ng-deep .mat-tab-body-wrapper {
+  background-color: transparent !important;
+}
 .personal-details {
   color: gray;
   display: inline-flex;
