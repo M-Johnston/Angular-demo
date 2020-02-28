@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {FoodService} from '../../services/food/food.service';
 
 @Component({
   selector: 'app-syntax-demo',
@@ -15,10 +16,18 @@ export class SyntaxDemoComponent implements OnInit {
   @Input()
   FeatureImage: string;
 
-  constructor() {
+  showFood = false;
+  foodList: Array<string>;
+
+  constructor(private foodService: FoodService) {
   }
 
   ngOnInit() {
+    this.foodList = this.foodService.getFood();
+  }
+
+  onShowFoodClick() {
+    this.showFood = true;
   }
 
 }
